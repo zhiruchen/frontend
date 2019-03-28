@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 import { ApiResponse } from '../models/api-response.model';
+import { User } from '../models/user.model';
 
 @Injectable()
 export class ApiService {
@@ -24,5 +25,9 @@ export class ApiService {
 
   getUsers(): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(this.baseURL + '/users');
+  }
+
+  createUser(user: User): Observable<ApiResponse> {
+    return this.http.post<ApiResponse>(this.baseURL + '/users', user, this.httpOptions);
   }
 }

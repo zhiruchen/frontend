@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { ApiService } from './services/api.service';
+import { AddUserComponent } from './add-user/add-user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ListUserComponent
+    ListUserComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

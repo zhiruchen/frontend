@@ -24,4 +24,8 @@ export class ListUserComponent implements OnInit {
     });
   }
 
+  addUser(): void {
+    this.router.navigate(['add-user']);
+  }
+
 }
