@@ -22,7 +22,7 @@ export class AddUserComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       age: ['', Validators.required],
-      salary: ['', Validators.required],
+      salary: ['', Validators.required]
     });
   }
 

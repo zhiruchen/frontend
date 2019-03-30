@@ -28,4 +28,16 @@ export class ListUserComponent implements OnInit {
     this.router.navigate(['add-user']);
   }
 
+  editUser(user: User): void {
+    window.localStorage.removeItem('editUserId');
+    window.localStorage.setItem('editUserId', user.id.toString());
+    this.router.navigate(['edit-user']);
+  }
+
+  deleteUser(user: User): void {
+    this.apiService.deleteUser(user).subscribe(data => {
+      this.users = this.users.filter(u => u !== user);
+    });
+  }
+
 }

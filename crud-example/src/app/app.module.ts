@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { ApiService } from './services/api.service';
 import { AddUserComponent } from './add-user/add-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AddUserComponent } from './add-user/add-user.component';
     AppComponent,
     LoginComponent,
     ListUserComponent,
-    AddUserComponent
+    AddUserComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

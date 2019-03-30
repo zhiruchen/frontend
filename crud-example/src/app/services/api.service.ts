@@ -27,7 +27,20 @@ export class ApiService {
     return this.http.get<ApiResponse>(this.baseURL + '/users');
   }
 
+  getUserById(id: number): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(this.baseURL + '/users/' + id);
+  }
+
   createUser(user: User): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(this.baseURL + '/users', user, this.httpOptions);
   }
+
+  updateUser(user: User): Observable<ApiResponse> {
+    return this.http.put<ApiResponse>(this.baseURL + '/users', user, this.httpOptions);
+  }
+
+  deleteUser(user: User): Observable<ApiResponse> {
+    return this.http.delete<ApiResponse>(this.baseURL + '/users/' + user.id.toString());
+  }
+
 }
